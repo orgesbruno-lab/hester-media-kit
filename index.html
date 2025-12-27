@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hestér Pereira Oliveira | Media Kit</title>
+
 <style>
 body {
     margin: 0;
@@ -11,66 +12,163 @@ body {
     background: #0f0f0f;
     color: #ffffff;
 }
+
 .container {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
+    animation: fadeIn 0.8s ease-in;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 h1 {
     font-size: 36px;
     margin-bottom: 5px;
 }
+
 h2 {
     color: #c9a24d;
     font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
+
 .section {
     margin-bottom: 40px;
 }
+
 .section h3 {
     border-bottom: 1px solid #333;
     padding-bottom: 8px;
     margin-bottom: 15px;
     font-size: 20px;
 }
+
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
+
 .card {
     background: #1a1a1a;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(201,162,77,0.15);
+}
+
 .card strong {
     font-size: 22px;
     color: #c9a24d;
 }
+
+a {
+    color: #c9a24d;
+    text-decoration: none;
+}
+
 .footer {
     text-align: center;
     margin-top: 60px;
     font-size: 14px;
     color: #aaa;
 }
-a {
+
+.lang-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+}
+
+.lang-switch span {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: 1px solid #c9a24d;
     color: #c9a24d;
-    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download:hover {
+    background: #c9a24d;
+    color: #0f0f0f;
 }
 </style>
 </head>
+
 <body>
+
+<div class="lang-switch">
+    <span onclick="setLang('pt')">PT</span> |
+    <span onclick="setLang('en')">EN</span>
+</div>
+
 <div class="container">
 
+<!-- PT -->
+<div id="pt">
+<h1>Hestér Pereira Oliveira</h1>
+<h2>ATLETA DE JIU-JITSU • VICE-CAMPEÃ ADCC 2025</h2>
+
+<div class="section">
+<h3>Perfil Profissional</h3>
+<p>Atleta de Jiu-Jitsu competitivo, focada em performance, disciplina e constância.
+Produz conteúdo esportivo e lifestyle, conectando marcas a um público altamente engajado.</p>
+<p><strong>Localização:</strong> Jundiaí – SP, Brasil<br>
+<strong>Equipe:</strong> Rilion Gracie Academy<br>
+<strong>Faixa:</strong> Azul (em progressão para Roxa)</p>
+</div>
+
+<div class="section">
+<h3>Conquistas</h3>
+<p>🥈 ADCC 2025 – Segundo Lugar</p>
+</div>
+
+<div class="section">
+<h3>Desempenho Digital</h3>
+<div class="stats">
+<div class="card"><strong>4,6M</strong><br>Alcance no Instagram</div>
+<div class="card"><strong>206K</strong><br>Interações</div>
+<div class="card"><strong>+15,7K</strong><br>Novos Seguidores</div>
+<div class="card"><strong>400K</strong><br>Visualizações no TikTok</div>
+</div>
+</div>
+
+<div class="section">
+<h3>Contato</h3>
+<p>Email: <a href="mailto:esport.hesterbrj@gmail.com">esport.hesterbrj@gmail.com</a></p>
+<a class="download" href="Media_Kit_Hester_Pereira.pdf" target="_blank">
+📄 Baixar Media Kit (PDF)
+</a>
+</div>
+</div>
+
+<!-- EN -->
+<div id="en" style="display:none;">
 <h1>Hestér Pereira Oliveira</h1>
 <h2>JIU-JITSU ATHLETE • ADCC 2025 RUNNER-UP</h2>
 
 <div class="section">
 <h3>Professional Profile</h3>
-<p>Competitive Jiu-Jitsu athlete focused on performance, discipline, and consistency. 
-Creates sports and lifestyle content, connecting brands with a highly engaged audience in the fitness and martial arts niche.</p>
+<p>Competitive Jiu-Jitsu athlete focused on performance, discipline, and consistency.
+Creates sports and lifestyle content connecting brands with an engaged audience.</p>
 <p><strong>Location:</strong> Jundiaí – São Paulo, Brazil<br>
 <strong>Team:</strong> Rilion Gracie Academy<br>
 <strong>Belt:</strong> Blue (progressing to Purple)</p>
@@ -92,19 +190,12 @@ Creates sports and lifestyle content, connecting brands with a highly engaged au
 </div>
 
 <div class="section">
-<h3>Audience</h3>
-<p>Male audience (18–34)<br>
-Interests: Sports, Fitness, Lifestyle, Martial Arts</p>
-</div>
-
-<div class="section">
-<h3>Brand Deliverables</h3>
-<p>Stories • Reels • Feed Posts • Product Usage • Competition Tagging • Exclusive Content</p>
-</div>
-
-<div class="section">
 <h3>Contact</h3>
 <p>Email: <a href="mailto:esport.hesterbrj@gmail.com">esport.hesterbrj@gmail.com</a></p>
+<a class="download" href="Media_Kit_Hester_Pereira.pdf" target="_blank">
+📄 Download Media Kit (PDF)
+</a>
+</div>
 </div>
 
 <div class="footer">
@@ -112,5 +203,13 @@ Interests: Sports, Fitness, Lifestyle, Martial Arts</p>
 </div>
 
 </div>
+
+<script>
+function setLang(lang) {
+    document.getElementById('pt').style.display = lang === 'pt' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+}
+</script>
+
 </body>
 </html>
