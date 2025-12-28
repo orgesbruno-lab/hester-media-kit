@@ -3,283 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Hestér Pereira Oliveira | Media Kit Oficial</title>
-<meta name="description" content="Media Kit oficial de Hestér Pereira Oliveira, atleta de Jiu-Jitsu, vice-campeã ADCC 2025. Parcerias, métricas digitais e contato profissional.">
+<title>Hester BJJ | Athlete Media Kit</title>
 
 <style>
+:root {
+  --primary:#0d1b2a;
+  --secondary:#1b263b;
+  --accent:#e63946;
+  --text:#ffffff;
+  --muted:#cbd5e1;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f0f0f;
-    color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    animation: fadeIn 0.8s ease-in;
+header {
+  padding:40px 20px;
+  text-align:center;
+  animation: fadeDown 1s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+header h1 {
+  font-size:2.8rem;
+  letter-spacing:1px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
+header p {
+  color:var(--muted);
+  margin-top:10px;
 }
 
-h2 {
-    color: #c9a24d;
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+.lang-btn {
+  margin-top:20px;
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:8px 18px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.section {
-    margin-bottom: 45px;
+.lang-btn:hover {
+  background:var(--accent);
+  color:#fff;
 }
 
-.section h3 {
-    border-bottom: 1px solid #333;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+section {
+  max-width:1000px;
+  margin:60px auto;
+  padding:0 20px;
+  animation: fadeUp 1.2s ease;
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 14px;
-    transition: all 0.3s ease;
+  background: rgba(255,255,255,0.05);
+  border-radius:20px;
+  padding:30px;
+  margin-bottom:30px;
+  backdrop-filter: blur(10px);
+  transition:0.4s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(201,162,77,0.18);
+  transform: translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.card strong {
-    font-size: 24px;
-    color: #c9a24d;
+.card h2 {
+  margin-bottom:15px;
+  color:var(--accent);
 }
 
-a {
-    color: #c9a24d;
-    text-decoration: none;
+.info-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
 }
 
-.lang-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-weight: bold;
+.info {
+  background: rgba(255,255,255,0.06);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
 }
 
-.lang-switch span {
-    cursor: pointer;
-    margin-left: 10px;
+.info:hover {
+  background: rgba(255,255,255,0.12);
 }
 
-.download {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 26px;
-    border-radius: 30px;
-    border: 1px solid #c9a24d;
-    color: #c9a24d;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.actions {
+  text-align:center;
+  margin-top:40px;
 }
 
-.download:hover {
-    background: #c9a24d;
-    color: #0f0f0f;
+.actions a {
+  display:inline-block;
+  margin:10px;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
 }
 
-.cta {
-    background: linear-gradient(135deg, #1a1a1a, #141414);
-    padding: 30px;
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid #2a2a2a;
+.btn-primary {
+  background:var(--accent);
+  color:#fff;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 14px;
-    color: #aaa;
+.btn-primary:hover {
+  opacity:0.85;
+  transform:scale(1.05);
+}
+
+.btn-outline {
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+
+.btn-outline:hover {
+  background:var(--accent);
+  color:#fff;
+}
+
+footer {
+  text-align:center;
+  padding:30px 10px;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity:0; transform:translateY(-30px);}
+  to { opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(40px);}
+  to { opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="lang-switch">
-    <span onclick="setLang('pt')">PT</span> |
-    <span onclick="setLang('en')">EN</span>
-</div>
+<header>
+  <h1 id="title">Hester BJJ</h1>
+  <p id="subtitle">Atleta Profissional de Jiu-Jitsu</p>
+  <button class="lang-btn" onclick="toggleLanguage()">EN / PT</button>
+</header>
 
-<div class="container">
+<section>
+  <div class="card">
+    <h2 id="aboutTitle">Sobre o Atleta</h2>
+    <p id="aboutText">
+      Atleta de Jiu-Jitsu focado em alto rendimento, competições e parcerias esportivas.
+      Busco marcas que desejam visibilidade, credibilidade e presença no cenário competitivo.
+    </p>
+  </div>
 
-<!-- ================= PT ================= -->
-<div id="pt">
+  <div class="card">
+    <h2 id="statsTitle">Informações</h2>
+    <div class="info-grid">
+      <div class="info"><strong>Modalidade:</strong> Jiu-Jitsu</div>
+      <div class="info"><strong>Nível:</strong> Competidor</div>
+      <div class="info"><strong>Objetivo:</strong> Parcerias</div>
+      <div class="info"><strong>Email:</strong> esport.hesterbjj@gmail.com</div>
+    </div>
+  </div>
 
-<h1>Hestér Pereira Oliveira</h1>
-<h2>ATLETA DE JIU-JITSU • VICE-CAMPEÃ ADCC 2025</h2>
+  <div class="actions">
+    <a href="media-kit-hester-bjj.pdf" download class="btn-primary" id="downloadBtn">
+      📄 Baixar Media Kit
+    </a>
+    <a href="mailto:esport.hesterbjj@gmail.com" class="btn-outline" id="contactBtn">
+      📩 Entrar em Contato
+    </a>
+  </div>
+</section>
 
-<div class="section">
-<h3>Perfil Profissional</h3>
-<p>
-Atleta de Jiu-Jitsu competitivo, focada em alta performance, disciplina e evolução constante.
-Produz conteúdo esportivo e lifestyle, conectando marcas a um público altamente engajado e fiel.
-</p>
-<p>
-<strong>Localização:</strong> Jundiaí – SP, Brasil<br>
-<strong>Equipe:</strong> Rilion Gracie Academy<br>
-<strong>Faixa:</strong> Azul (em progressão para Roxa)
-</p>
-</div>
-
-<div class="section">
-<h3>Conquistas</h3>
-<p>🥈 ADCC 2025 – Segundo Lugar</p>
-</div>
-
-<div class="section">
-<h3>Desempenho Digital</h3>
-<div class="stats">
-<div class="card"><strong>4,6M</strong><br>Alcance no Instagram</div>
-<div class="card"><strong>812K</strong><br>Interações</div>
-<div class="card"><strong>36,7K</strong><br>Novos Seguidores</div>
-<div class="card"><strong>+5Mi</strong><br>Visualizações no TikTok</div>
-</div>
-</div>
-
-<div class="section">
-<h3>Público Alcançado</h3>
-<p>
-• Homens e mulheres de 18 a 35 anos<br>
-• Interesse em Jiu-Jitsu, esportes, fitness e lifestyle<br>
-• Público altamente engajado em conteúdo competitivo
-</p>
-</div>
-
-<div class="section">
-<h3>Oportunidades de Parceria</h3>
-<p>
-• Divulgação de marca em competições<br>
-• Posts e Reels no Instagram e TikTok<br>
-• Stories com CTA e link<br>
-• Conteúdo UGC<br>
-• Presença em eventos e ativações
-</p>
-</div>
-
-<div class="section cta">
-<h3>Vamos construir uma parceria de alto nível</h3>
-<p>Entre em contato para propostas, colaborações e patrocínios.</p>
-</div>
-
-<div class="section">
-<h3>Contato</h3>
-<p>Email: <a href="mailto:esport.hesterbjj@gmail.com">esport.hesterbjj@gmail.com</a></p>
-<a class="download" href="Media_Kit_Hester_Pereira.pdf" target="_blank">
-📄 Baixar Media Kit (PDF)
-</a>
-</div>
-
-</div>
-
-<!-- ================= EN ================= -->
-<div id="en" style="display:none;">
-
-<h1>Hestér Pereira Oliveira</h1>
-<h2>JIU-JITSU ATHLETE • ADCC 2025 RUNNER-UP</h2>
-
-<div class="section">
-<h3>Professional Profile</h3>
-<p>
-Competitive Jiu-Jitsu athlete focused on performance, discipline and consistency.
-Creates sports and lifestyle content connecting brands with a highly engaged audience.
-</p>
-<p>
-<strong>Location:</strong> Jundiaí – São Paulo, Brazil<br>
-<strong>Team:</strong> Rilion Gracie Academy<br>
-<strong>Belt:</strong> Blue (progressing to Purple)
-</p>
-</div>
-
-<div class="section">
-<h3>Achievements</h3>
-<p>🥈 ADCC 2025 – Second Place</p>
-</div>
-
-<div class="section">
-<h3>Digital Performance</h3>
-<div class="stats">
-<div class="card"><strong>4.6M</strong><br>Instagram Reach</div>
-<div class="card"><strong>812K</strong><br>Interactions</div>
-<div class="card"><strong>36.7K</strong><br>New Followers</div>
-<div class="card"><strong>+5M</strong><br>TikTok Views</div>
-</div>
-</div>
-
-<div class="section">
-<h3>Audience</h3>
-<p>
-• Men and women aged 18–35<br>
-• Interest in Jiu-Jitsu, sports, fitness and lifestyle<br>
-• High engagement and competitive audience
-</p>
-</div>
-
-<div class="section">
-<h3>Partnership Opportunities</h3>
-<p>
-• Brand exposure in competitions<br>
-• Instagram & TikTok posts and reels<br>
-• Stories with CTA<br>
-• UGC content<br>
-• Event appearances
-</p>
-</div>
-
-<div class="section cta">
-<h3>Let’s build a high-level partnership</h3>
-<p>Contact for sponsorships and collaborations.</p>
-</div>
-
-<div class="section">
-<h3>Contact</h3>
-<p>Email: <a href="mailto:esport.hesterbjj@gmail.com">esport.hesterbjj@gmail.com</a></p>
-<a class="download" href="Media_Kit_Hester_Pereira.pdf" target="_blank">
-📄 Download Media Kit (PDF)
-</a>
-</div>
-
-</div>
-
-<div class="footer">
-© 2025 Hestér Pereira Oliveira
-</div>
-
-</div>
+<footer>
+  © 2025 Hester BJJ • All Rights Reserved
+</footer>
 
 <script>
-function setLang(lang) {
-    document.getElementById('pt').style.display = lang === 'pt' ? 'block' : 'none';
-    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+let lang = "pt";
+
+function toggleLanguage() {
+  if (lang === "pt") {
+    document.documentElement.lang = "en";
+    title.innerText = "Hester BJJ";
+    subtitle.innerText = "Professional Jiu-Jitsu Athlete";
+    aboutTitle.innerText = "About the Athlete";
+    aboutText.innerText =
+      "Jiu-Jitsu athlete focused on high performance, competitions and sports partnerships. Looking for brands that want visibility and credibility.";
+    statsTitle.innerText = "Information";
+    downloadBtn.innerText = "📄 Download Media Kit";
+    contactBtn.innerText = "📩 Contact";
+    lang = "en";
+  } else {
+    document.documentElement.lang = "pt-BR";
+    title.innerText = "Hester BJJ";
+    subtitle.innerText = "Atleta Profissional de Jiu-Jitsu";
+    aboutTitle.innerText = "Sobre o Atleta";
+    aboutText.innerText =
+      "Atleta de Jiu-Jitsu focado em alto rendimento, competições e parcerias esportivas.";
+    statsTitle.innerText = "Informações";
+    downloadBtn.innerText = "📄 Baixar Media Kit";
+    contactBtn.innerText = "📩 Entrar em Contato";
+    lang = "pt";
+  }
 }
 </script>
 
